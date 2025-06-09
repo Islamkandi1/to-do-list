@@ -44,12 +44,11 @@ submit.addEventListener("click", () => {
 // remove & cheked
 taskList.addEventListener("click", (e) => {
   if (e.target.tagName === "I") {
-    e.target.parentElement.remove();
-    scoreList(-1);
-    scoreShow();
-    goodJoop()
-    if (e.target.parentElement.classList.contains("checked")) {
-      +taskScore.innerHTML--;
+    if (!e.target.parentElement.classList.contains("checked")) {
+      e.target.parentElement.remove();
+      scoreList(-1);
+      scoreShow();
+      goodJoop();
     }
   } else if (e.target.tagName == "LI") {
     e.target.classList.toggle("checked");
@@ -110,8 +109,8 @@ function goodJoop() {
     taskScore.innerHTML = 0;
     progress.classList.add("d-none");
     count = 0;
-    scoreTask = 0
+    scoreTask = 0;
     localStorage.setItem("count", count);
-    localStorage.setItem("score", scoreTask)
+    localStorage.setItem("score", scoreTask);
   }
 }
