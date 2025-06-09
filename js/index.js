@@ -110,6 +110,8 @@ function goodJoop() {
     taskScore.innerHTML = 0;
     progress.classList.add("d-none");
     count = 0;
+    scoreTask = 0
     localStorage.setItem("count", count);
+    localStorage.setItem("score", scoreTask)
   }
 }
