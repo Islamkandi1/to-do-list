@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="add thing you want to do it and check if you finched those thing"
+    />
+    <meta name="author" content="islam kandil" />
+    <title>to do list</title>
+    <!-- links -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main class="list">
+      <section
+        class="container d-flex justify-content-center align-items-center"
+      >
+        <section class="list-contain">
+          <section
+            class="head mb-4 d-flex align-items-center justify-content-between column-gap-2"
+          >
+            <section class="address d-flex align-items-center column-gap-2">
+              <h2 class="text-capitalize">to-do-list</h2>
+              <figure>
+                <img src="./images/icon.png" class="w-100" alt="" />
+              </figure>
+            </section>
+            <section id="progress" class="progress d-none">
+              <p class="m-0" id="task-score">0</p>
+              <p class="m-0">/</p>
+              <p class="m-0" id="task-count">0</p>
+            </section>
+          </section>
+          <form
+            id="form"
+            action=""
+            class="d-flex justify-content-between align-items-center rounded-pill mb-3"
+          >
+            <input
+              id="task"
+              type="text"
+              placeholder="add your task"
+              name="task"
+              class="flex-grow-1 border-0 w-100"
+            />
+            <button
+              id="submit"
+              type="submit"
+              class="text-capitalize rounded-pill border-0 px-5"
+            >
+              add
+            </button>
+          </form>
+          <p class="text-capitalize d-none" id="alert">
+            it must be at leat 5 letters
+          </p>
+          <ul class="tasks" id="task-list"></ul>
+        </section>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
