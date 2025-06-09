@@ -47,7 +47,7 @@ taskList.addEventListener("click", (e) => {
     e.target.parentElement.remove();
     scoreList(-1);
     scoreShow();
-
+    goodJoop()
     if (e.target.parentElement.classList.contains("checked")) {
       +taskScore.innerHTML--;
     }
